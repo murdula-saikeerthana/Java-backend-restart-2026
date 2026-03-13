@@ -1,8 +1,10 @@
-package model;
 
-import policy.BonusPolicy;
 
-public class Manager extends Employee implements BonusPolicy {
+//import policy.BonusPolicy;
+
+import model.Employee;
+
+public class Manager extends Employee {
     private String department;
     private int teamSize;
 
@@ -11,7 +13,6 @@ public class Manager extends Employee implements BonusPolicy {
         this.department = department;
         this.teamSize = teamSize;
     }   
-    @Override
     public double calculateBonus(int salary) {
         // Implementation for calculating manager bonus
         return salary * 0.2; // Example: 20% of salary as bonus
